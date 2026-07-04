@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Codeoid",
+    "slug": "codeoid-mobile",
+    "version": "0.0.1",
+    "scheme": "codeoid",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ai.codeoid.mobile"
+    },
+    "android": {
+      "package": "ai.codeoid.mobile",
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
