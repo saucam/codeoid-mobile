@@ -2,7 +2,7 @@
 
 Native **iOS + Android** (and web, via React Native Web) client for the [Codeoid](https://github.com/saucam/codeoid) daemon — a self-hosted, identity-native control plane for AI coding agents.
 
-> **Status: early scaffold / design phase — not yet functional.** This repo currently holds the design and project skeleton; the app is built in phases per [`docs/mobile-app-design.md`](docs/mobile-app-design.md).
+> **Status: P1 — connect, auth, attach.** Daemon-URL entry → ZeroID API-key sign-in → live session list → streaming transcript (plain-text rows). Built in phases per [`docs/mobile-app-design.md`](docs/mobile-app-design.md) §10; next up: rich transcript + approvals + push (P2).
 
 ## What it is
 
@@ -23,13 +23,19 @@ What sets it apart from other "control your coding agent from your phone" apps:
 
 ## Getting started
 
-This is a scaffold — dependencies are pinned to the SDK 57 family but not yet installed/validated. When building begins:
-
 ```bash
 npm install
-npx expo install --fix   # reconcile RN / react / expo-* versions to the SDK
 npx expo start           # then press i / a / w
 ```
+
+On the connect screen, enter your daemon URL (e.g. `http://192.168.1.x:7400`) and a
+ZeroID API key (`zid_sk_…`). The key is stored in the device Keychain/Keystore and
+exchanged for a short-lived JWT via the daemon's same-origin `/oauth2/token` proxy;
+the JWT is re-minted on every reconnect. Google OAuth sign-in lands in P3.
+
+Note: `metro.config.js` carries a resolver fallback because `@codeoid/protocol` /
+`@codeoid/core` ship raw TypeScript source with TS-ESM style `.js` relative imports,
+which Metro does not redirect to `.ts` inside `node_modules` on its own.
 
 ## Related repos
 
