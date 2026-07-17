@@ -1,12 +1,12 @@
 # codeoid-mobile
 
-Native **iOS + Android** (and web, via React Native Web) client for the [Codeoid](https://github.com/saucam/codeoid) daemon — a self-hosted, identity-native control plane for AI coding agents.
+Native **iOS + Android** (and web, via React Native Web) client for the [Codeoid](https://github.com/highflame-ai/codeoid) daemon — a self-hosted, identity-native control plane for AI coding agents.
 
 > **Status: P1 — connect, auth, attach.** Daemon-URL entry → ZeroID API-key sign-in → live session list → streaming transcript (plain-text rows). Built in phases per [`docs/mobile-app-design.md`](docs/mobile-app-design.md) §10; next up: rich transcript + approvals + push (P2).
 
 ## What it is
 
-Codeoid runs as a daemon on your own machine; its clients are pure renderers that attach to it. This is the third first-class client (alongside the Solid web UI in the daemon repo and the Rust TUI in [`codeoid-ui`](https://github.com/saucam/codeoid-ui)) — built for the phone, and designed to become the home of the **conductor** (supervise a fleet of agents by voice, from your pocket).
+Codeoid runs as a daemon on your own machine; its clients are pure renderers that attach to it. This is the third first-class client (alongside the Solid web UI in the daemon repo and the Rust TUI in [`codeoid-ui`](https://github.com/highflame-ai/codeoid-ui)) — built for the phone, and designed to become the home of the **conductor** (supervise a fleet of agents by voice, from your pocket).
 
 What sets it apart from other "control your coding agent from your phone" apps:
 
@@ -39,8 +39,8 @@ which Metro does not redirect to `.ts` inside `node_modules` on its own.
 
 ## Related repos
 
-- [`saucam/codeoid`](https://github.com/saucam/codeoid) — the daemon + CLI + Solid web UI (the source of `@codeoid/protocol` / `@codeoid/core`)
-- [`saucam/codeoid-ui`](https://github.com/saucam/codeoid-ui) — the Rust (Ratatui) terminal client
+- [`highflame-ai/codeoid`](https://github.com/highflame-ai/codeoid) — the daemon + CLI + Solid web UI (the source of `@codeoid/protocol` / `@codeoid/core`)
+- [`highflame-ai/codeoid-ui`](https://github.com/highflame-ai/codeoid-ui) — the Rust (Ratatui) terminal client
 
 ## License
 

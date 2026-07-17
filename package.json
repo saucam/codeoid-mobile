@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saucam/codeoid-mobile.git"
+    "url": "git+https://github.com/highflame-ai/codeoid-mobile.git"
   },
   "main": "expo-router/entry",
   "scripts": {
